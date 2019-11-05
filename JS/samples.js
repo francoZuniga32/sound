@@ -8,8 +8,5 @@ var arreglo = new Array(
 
 function cargarCanciones(i){
     //cargamos las canciones en el cuepo de la funcion
-    $("#contenido").html(function(i){
-        console.log(i);
-        return "hola mudno "+i;
-    });
+    $("#contenido").append("<div>hola mundo</div>");
 }
