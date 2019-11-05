@@ -15,155 +15,95 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
-    <label for="customRange1">Example range</label>
-    <input type="range" class="custom-range" id="customRange1" min="0" max="100" value="0">
-    <p id="tempsnap"></p>
-
-    <script>
-        $("#customRange1").on("input change", function(){
-        
-        var thisval = $(this).val();
-
-        $("#tempsnap").html(thisval);
-    });
-    </script>
-    <div class="container">
-        <div class="row border">
-          <div class="col" style="width: 60px;">
-                <button id="btn1"class="btn" style="padding: 0; margin: 0;width: 60px; height: 60px;" onclick="playMusic('1');">
-                    <i class="material-icons md-60" id="img1" style="padding: 0; width: 60px;">
-                        play_arrow
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="Media/logo.png" alt="" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="material-icons">
+                        menu
                     </i>
-                </button>
-          </div>
-          <div class="col-10">
-                <div id="spec" style="">
-
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Samples
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#historia">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ubicacion">Patrocionio</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item text-center">
+                        <a href=""><img src="Media/facebook.png" alt=""></a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a href=""><img src="Media/twitter.png" alt=""></a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a href=""><img src="Media/pinteres.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="cuerpo">
+        <div class="row">
+            <div class="col-3 img">
+                <img src="Media/img1.png" alt="" class="img1">
+            </div>
+            <div class="col d-flex justify-content-center colTex">
+               <div class="">
+                    <h2>
+                        biemvenido
+                    </h2>
+                    <p>
+                        encontra los bits de audio que necesitas
+                    </p>
+               </div>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col d-flex justify-content-center align-items-center colTex ">
+                <div class="">
+                     <h3>
+                        Exoplora la comundad y sus fantasticos trabajos
+                     </h3>
+                     <p>
+                         encontra los bits de audio que necesitas
+                     </p>
                 </div>
-          </div>
-          <div class="col">
-                <div id="spec" style="">
-asdasd
+             </div>
+            <div class="col-3 img">
+                <img src="Media/img2.png" alt="">
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-3 img">
+                <img src="Media/img3.png" alt="">
+            </div>
+            <div class="col d-flex justify-content-center align-items-center colTex">
+                <div class="">
+                     <h3>
+                        Exoplora la comundad y sus fantasticos trabajos
+                     </h3>
+                     <p>
+                        Explora trabajos gratuitos y conoce a sus creadores. ademas de poder acceder a mas trabajos con la suscripcion premium, la cual esta pensada para ser accesible                     </p>
                 </div>
-          </div>
+             </div>
         </div>
     </div>
-
-
-
-
-
-
-        <!-- Create a div where the audio waves will be shown --> 
-        <div>
-            
-            <div id="1-botones">
-                <input type="button" id="btn-play" value="Play" disabled="disabled"/>
-                <input type="button" id="btn-pause" value="Pause" disabled="disabled"/>
-                <input type="button" id="btn-stop" value="Stop" disabled="disabled" />
-            </div>
-        </div>
-        
-        <div class="card  d-flex justify-content-start">
-            <div style="margin: 0;">
-            </div>
-            <div class="card-body" style="margin: 0;width: 90%; height: 60px; padding: 0; margin: 0;">
-            </div>
-        </div>
-        <!-- Load the wavesurferscript , in this case from a CDN -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.3.7/wavesurfer.min.js"></script>
-        <script>
-            function playMusic(id){
-                $("#img"+id).empty();
-                $("#img"+id).html("pause");
-                $("#btn"+id).attr("onclick","pauseMusic('"+id+"')");
-            }
-
-            function pauseMusic(id){
-                $("#img"+id).empty();
-                $("#img"+id).html("play_arrow");
-                $("#btn"+id).attr("onclick","playMusic('"+id+"')");
-            }
-
-            var playFalco = true;
-
-            //Store the 3 buttons in some object
-            var buttons = {
-                play: document.getElementById("btn-play"),
-                pause: document.getElementById("btn-pause"),
-                stop: document.getElementById("btn-stop")
-            };
-            
-
-            // Create an instance of wave surfer with its configuration
-            var Spectrum = WaveSurfer.create({
-                container: '#spec',
-                progressColor: "#65EEB7",
-                barWidth: 3,
-                width: 300,
-                height: 60,
-                maxCanvasWidth: 300,
-                responsive: true 
-            });
-
-            // Handle Play button
-            buttons.play.addEventListener("click", function(){
-                Spectrum.play();
-
-                // Enable/Disable respectively buttons
-                buttons.stop.disabled = false;
-                buttons.pause.disabled = false;
-                buttons.play.disabled = true;
-            }, false);
-
-            // Handle Pause button
-            buttons.pause.addEventListener("click", function(){
-                Spectrum.pause();
-
-                // Enable/Disable respectively buttons
-                buttons.pause.disabled = true;
-                buttons.play.disabled = false;
-            }, false);
-
-
-            // Handle Stop button
-            buttons.stop.addEventListener("click", function(){
-                Spectrum.stop();
-
-                // Enable/Disable respectively buttons
-                buttons.pause.disabled = true;
-                buttons.play.disabled = false;
-                buttons.stop.disabled = true;
-            }, false);
-
-
-            // Add a listener to enable the play button once it's ready
-            Spectrum.on('ready', function () {
-                playFalco = true;
-            });
-            
-            // If you want a responsive mode (so when the user resizes the window)
-            // the spectrum will be still playable
-            window.addEventListener("resize", function(){
-                // Get the current progress according to the cursor position
-                var currentProgress = Spectrum.getCurrentTime() / Spectrum.getDuration();
-
-                // Reset graph
-                Spectrum.empty();
-                Spectrum.drawBuffer();
-                // Set original position
-                Spectrum.seekTo(currentProgress);
-
-                // Enable/Disable respectively buttons
-                buttons.pause.disabled = true;
-                buttons.play.disabled = false;
-                buttons.stop.disabled = false;
-            }, false);
-
-            // Load the audio file from your domain !
-            Spectrum.load('epic.mp3');
-        </script>
+    <footer class="">
+        asd
+    </footer>
 </body>
 </html>

@@ -1,0 +1,105 @@
+nav{
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.46);
+}
+nav .logo{
+    height: 50px;
+}
+
+nav ul li a{
+    font-size: 10pt;
+    color: black;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+nav ul li a:hover{
+    color: rgb(32, 32, 32);
+}
+
+nav ul li a img{
+    width: 40px;
+    margin: 10px;
+}
+
+.img1{
+    height: 70%;
+}
+
+.cuerpo{
+    height: 100%;
+}
+
+.col{
+    margin: 10%;
+}
+
+.col div{
+    text-align: center;
+}
+
+.col div h2{
+    font-size: 64px;
+    font-family: 'Space Mono', monospace;
+}
+
+.col div p{
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+}
+
+.row2 div div p{
+    font-size: 20px;
+}
+
+.img{
+    width: 338px;
+}
+
+footer{
+    margin: 0;
+    background-color: #474744;
+}
+
+
+
+@media (max-width:768px){
+    .img{
+        display: none;
+    }
+    
+    .row{
+        min-height: 500px;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    .col{
+        margin: 0;
+        padding: 0;
+    }
+
+    .col div{
+        text-align: center;
+    }
+    
+    .col div h2{
+        font-size: 28px;
+        font-family: 'Space Mono', monospace;
+    }
+    
+    .col div p{
+        font-size: 18px;
+        font-family: 'Space Mono', monospace;
+    }
+
+    .colTex{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .row2 div div p{
+        font-size: 20px;
+    }
+}

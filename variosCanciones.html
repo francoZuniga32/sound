@@ -15,66 +15,109 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.3.7/wavesurfer.min.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src=""></script>
 </head>
 <body onload="cargar();">
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img src="Media/logo.png" alt="" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="material-icons">
+                    menu
+                </i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#carta">Carta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#historia">Nuestra Historia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ubicacion">Donde Estamos</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item text-center">
+                    <a href=""><img src="Media/facebook.png" alt=""></a>
+                </li>
+                <li class="nav-item text-center">
+                    <a href=""><img src="Media/twitter.png" alt=""></a>
+                </li>
+                <li class="nav-item text-center">
+                    <a href=""><img src="Media/pinteres.png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <script>
-    //arreglo con las los productos y sus medias
-    var arreglo = new Array(new Array("spec1", "epic.mp3"), new Array("spec2", "dubs.mp3"), new Array("spec3", "dubs.mp3"));
-    
+    //arreglo con las los productos y sus medias    
     </script>
 
     <div class="container">
-        <div class="row border">
-            <div id="controles1" class="col" style="width: 60px;">
-                <button id="btnPlay1" class="btn" onclick="playMusic(1);">
-                    <i class="material-icons md-60" id="img1" style="padding: 0; width: 60px;">
-                        play_arrow
-                    </i>
-                </button>
-
-                <button id="btnPause1" class="btn" style="display: none;" onclick="pauseMusic(1)">
-                    <i class="material-icons md-60" id="img1" style="padding: 0; width: 60px;">
-                        pause
-                    </i>
-                </button>
-                  <!--<button id="btn1"class="btn" style="padding: 0; margin: 0;width: 60px; height: 60px;" onclick="playMusic('1');">
-                  </button>-->
-            </div>
-            <div class="col-10">
-                    <div id="spec1"></div>
-            </div>
-            <div class="col">
-            </div>
-        </div>
-        <div class="row border">
-            <div id="controles1" class="col" style="width: 60px;">
-                <button id="btnPlay2" class="btn" onclick="playMusic(2);">
-                    <i class="material-icons md-60" id="img1" style="padding: 0; width: 60px;">
-                        play_arrow
-                    </i>
-                </button>
-
-                <button id="btnPause2" class="btn" style="display: none;" onclick="pauseMusic(2)">
-                    <i class="material-icons md-60" id="img1" style="padding: 0; width: 60px;">
-                        pause
-                    </i>
-                </button>
-                  <!--<button id="btn1"class="btn" style="padding: 0; margin: 0;width: 60px; height: 60px;" onclick="playMusic('1');">
-                  </button>-->
-            </div>
-            <div class="col-10">
-                    <div id="spec2"></div>
-            </div>
-            <div class="col">
-            </div>
-        </div>
+            <div class="card">
+                    <div class="card-body row">
+                            <div id="controles1" class="col" style="width: 60px;">
+                            <button id="btnPlay1" class="btn" onclick="playMusic(1);">
+                                <i class="material-icons md-60" id="img1" style="padding: 0; width: 60px;">
+                                    play_arrow
+                                </i>
+                            </button>
+            
+                            <button id="btnPause1" class="btn" style="display: none;" onclick="pauseMusic(1)">
+                                <i class="material-icons md-60" id="img1" style="padding: 0; width: 60px;">
+                                    pause
+                                </i>
+                            </button>
+                              <!--<button id="btn1"class="btn" style="padding: 0; margin: 0;width: 60px; height: 60px;" onclick="playMusic('1');">
+                              </button>-->
+                            </div>
+                            <div class="col-10">
+                                <div id="spec1">
+                                    
+                                </div>
+                            </div>
+                        <div class="col">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body row">
+                            <div id="controles2" class="col" style="width: 60px;">
+                            <button id="btnPlay2" class="btn" onclick="playMusic(2);">
+                                <i class="material-icons md-60" id="img1" style="padding: 0; width: 60px;">
+                                    play_arrow
+                                </i>
+                            </button>
+            
+                            <button id="btnPause2" class="btn" style="display: none;" onclick="pauseMusic(2)">
+                                <i class="material-icons md-60" id="img1" style="padding: 0; width: 60px;">
+                                    pause
+                                </i>
+                            </button>
+                              <!--<button id="btn1"class="btn" style="padding: 0; margin: 0;width: 60px; height: 60px;" onclick="playMusic('1');">
+                              </button>-->
+                            </div>
+                            <div class="col-10">
+                                <div id="spec2">
+                                    
+                                </div>
+                            </div>
+                        <div class="col">
+                        </div>
+                    </div>
+                </div>
     </div>
 
+    <div>
+    </div>
 
     <div id="spec1"></div>
-    <div id="spec2">
+    <div id="spec2"></div>
 
-    </div>
     <div id="controles2">
     </div >
     <script>
@@ -87,6 +130,9 @@
         $("#btnPause"+id).css("display", "none");
     }
     //funcion que carga el spectro
+    var arreglo = new Array(new Array("spec1", "epic.mp3"), new Array("spec2", "dubs.mp3"), new Array("spec3", "dubs.mp3"));
+
+
     function cargar() {
         for (let i = 0; i < arreglo.length; i++) {
             espectro(i+1,arreglo[i][0], arreglo[i][1]);
