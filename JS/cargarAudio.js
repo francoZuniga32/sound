@@ -14,6 +14,11 @@ function cargar() {
     }
 }
 
+function cargarCanciones(i){
+    //cargamos las canciones en el cuepo de la funcion
+    $("#contenido").append("<div id=\""+i+"\">asdasdasd</div>");
+}
+
 function espectro(id, contenedor, media){
     var Spectrum = WaveSurfer.create({
         container: '#'+contenedor,
